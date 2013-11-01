@@ -1,0 +1,4 @@
+% title 'Goodbye';
+
+%= tag p => q{That's all folks}
+

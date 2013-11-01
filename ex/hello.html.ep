@@ -1,0 +1,13 @@
+% title 'hello world';
+
+%= row begin
+  %= column 6 => begin
+    %= tag p => 'Herp'
+  % end
+  %= column 6 => begin
+    %= tag p => 'Derp'
+    %= tag p => ssOverlay => '1-' => 'Foo'
+    %= tag p => ssOverlay => '2-' => 'Bar'
+  % end
+% end
+

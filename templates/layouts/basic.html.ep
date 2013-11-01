@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    %= stylesheet '/bootstrap.min.css'
+    %= stylesheet '/simpleslides.css'
+    %= app->ppi_css if config->{ppi}
+    </head>
+  <body>
+
+  <!-- wrap non-footer contents -->
+    <div id="wrap">
+      <div class="container">
+        <h1 class="center"><%= title %></h1>
+        <div id="main">
+          %= content
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer" class="container">
+      <ul class="pager">
+        <li class="previous">
+          %= link_to Previous => slide => { slide => prev_slide }
+        </li>
+        <li>
+          %= "Page $slide / " . last_slide
+        </li>
+        <li class="next">
+          %= link_to Next => slide => { slide => next_slide }
+        </li>
+      </ul>
+    </div>
+
+    %= javascript '/jquery.js'
+    %= javascript '/mousetrap.min.js'
+    %= javascript '/simpleslides.js'
+    %= javascript begin
+    bindMousetrap(
+      "<%= url_for slide => { slide => prev_slide } %>",
+      "<%= url_for slide => { slide => next_slide } %>"
+    );
+    % end
+  </body>
+</html>
