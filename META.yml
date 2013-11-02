@@ -12,21 +12,21 @@ license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
-name: App-SimpleSlides
+name: App-MojoSlides
 no_index:
   file:
     - README.pod
 provides:
-  App::SimpleSlides:
-    file: lib/App/SimpleSlides.pm
+  App::MojoSlides:
+    file: lib/App/MojoSlides.pm
     version: 0.01
-  App::SimpleSlides::Slides:
-    file: lib/App/SimpleSlides/Slides.pm
+  App::MojoSlides::Slides:
+    file: lib/App/MojoSlides/Slides.pm
 requires:
   File::ShareDir: 1.00
   Mojolicious: 3.0
 resources:
-  bugtracker: http://github.com/jberger/App-SimpleSlides/issues
+  bugtracker: http://github.com/jberger/App-MojoSlides/issues
   license: http://dev.perl.org/licenses/
-  repository: http://github.com/jberger/App-SimpleSlides
+  repository: http://github.com/jberger/App-MojoSlides
 version: 0.01

@@ -6,7 +6,7 @@ use warnings;
 use Module::Build::Mojolicious;
 
 my $build = Module::Build::Mojolicious->new(
-  module_name        => 'App::SimpleSlides',
+  module_name        => 'App::MojoSlides',
   dist_author        => 'Joel Berger <joel.a.berger@gmail.com>',
   license            => 'perl',
   configure_requires => { 
@@ -18,8 +18,8 @@ my $build = Module::Build::Mojolicious->new(
   },
   meta_merge => {
     resources  => {
-      repository => "http://github.com/jberger/App-SimpleSlides",
-      bugtracker => "http://github.com/jberger/App-SimpleSlides/issues",
+      repository => "http://github.com/jberger/App-MojoSlides",
+      bugtracker => "http://github.com/jberger/App-MojoSlides/issues",
     },
     no_index => {
       file      => [ 'README.pod' ],

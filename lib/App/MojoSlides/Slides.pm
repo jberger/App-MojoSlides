@@ -1,4 +1,4 @@
-package App::SimpleSlides::Slides;
+package App::MojoSlides::Slides;
 
 use Mojo::Base -base;
 

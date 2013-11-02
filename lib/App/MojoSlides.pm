@@ -1,15 +1,15 @@
-package App::SimpleSlides;
+package App::MojoSlides;
 
 use Mojo::Base 'Mojolicious';
 
 our $VERSION = '0.01';
 $VERSION = eval $VERSION;
 
-use App::SimpleSlides::Slides;
+use App::MojoSlides::Slides;
 
 has slides => sub {
   my $self = shift;
-  return App::SimpleSlides::Slides->new( 
+  return App::MojoSlides::Slides->new( 
     $self->config->{slides} || ()
   );
 };
@@ -23,7 +23,7 @@ sub startup {
     require File::Spec;
     require File::Basename;
 
-    my $file = $ENV{SIMPLE_SLIDES_PRESENTATION} || 'presentation.pl';
+    my $file = $ENV{MOJO_SLIDES_PRESENTATION} || 'presentation.pl';
     return $file unless -e $file; # return early if not found
 
     my $abs = File::Spec->rel2abs($file);
@@ -70,7 +70,7 @@ sub startup {
 
   $self->helper( row     => sub { shift->tag( 'div', class => 'row', @_ ) } );
   $self->helper( column  => sub { shift->tag( 'div', class => 'col-md-'.shift, @_ ) } );
-  $self->helper( overlay => sub { shift->tag( 'div', ssOverlay => shift, @_ ) } );
+  $self->helper( overlay => sub { shift->tag( 'div', msOverlay => shift, @_ ) } );
 
   my $r = $self->routes;
   $r->any(
@@ -95,11 +95,11 @@ __END__
 
 =head1 NAME
 
-App::SimpleSlides - Write your presentations in Perl and Mojolicious!
+App::MojoSlides - Write your presentations in Perl and Mojolicious!
 
 =head1 SYNOPSIS
 
- $ simple_slides mypresentation.pl daemon
+ $ mojo_slides mypresentation.pl daemon
 
 =head1 DESCRIPTION
 
@@ -133,7 +133,7 @@ This software is in alpha form at best. It may eat baby kittens at any moment.
 
 =head1 SOURCE REPOSITORY
 
-L<http://github.com/jberger/App-SimpleSlides> 
+L<http://github.com/jberger/App-MojoSlides> 
 
 =head1 AUTHOR
 

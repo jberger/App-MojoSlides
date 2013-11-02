@@ -6,8 +6,8 @@
   % end
   %= column 6 => begin
     %= tag p => 'Derp'
-    %= tag p => ssOverlay => '1-' => 'Foo'
-    %= tag p => ssOverlay => '2-' => 'Bar'
+    %= tag p => msOverlay => '1-' => 'Foo'
+    %= tag p => msOverlay => '2-' => 'Bar'
   % end
 % end
 

@@ -4,7 +4,7 @@
     <title><%= title %></title>
     %= stylesheet '/bootstrap.min.css'
     %= stylesheet '/bootstrap-theme.min.css' if config->{bootstrap_theme}
-    %= stylesheet '/simpleslides.css'
+    %= stylesheet '/mojoslides.css'
     %= app->ppi_css if config->{ppi}
     </head>
   <body>
@@ -36,7 +36,7 @@
 
     %= javascript '/jquery.min.js'
     %= javascript '/mousetrap.min.js'
-    %= javascript '/simpleslides.js'
+    %= javascript '/mojoslides.js'
     %= javascript begin
     bindMousetrap(
       "<%= url_for slide => { slide => prev_slide } %>",

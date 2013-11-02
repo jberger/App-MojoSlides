@@ -1,4 +1,4 @@
- #!perl
+#!perl
 
 use strict;
 use warnings;
@@ -7,10 +7,10 @@ use FindBin;
 BEGIN { unshift @INC, "$FindBin::Bin/../lib" }
 
 if (@ARGV and -e $ARGV[0]) {
-  $ENV{SIMPLE_SLIDES_PRESENTATION} = shift;
+  $ENV{MOJO_SLIDES_PRESENTATION} = shift;
 }
 
 # Start command line interface for application
 require Mojolicious::Commands;
-Mojolicious::Commands->start_app('App::SimpleSlides');
+Mojolicious::Commands->start_app('App::MojoSlides');
 

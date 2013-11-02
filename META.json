@@ -12,7 +12,7 @@
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
       "version" : "2"
    },
-   "name" : "App-SimpleSlides",
+   "name" : "App-MojoSlides",
    "no_index" : {
       "file" : [
          "README.pod"
@@ -33,24 +33,24 @@
       }
    },
    "provides" : {
-      "App::SimpleSlides" : {
-         "file" : "lib/App/SimpleSlides.pm",
+      "App::MojoSlides" : {
+         "file" : "lib/App/MojoSlides.pm",
          "version" : "0.01"
       },
-      "App::SimpleSlides::Slides" : {
-         "file" : "lib/App/SimpleSlides/Slides.pm"
+      "App::MojoSlides::Slides" : {
+         "file" : "lib/App/MojoSlides/Slides.pm"
       }
    },
    "release_status" : "stable",
    "resources" : {
       "bugtracker" : {
-         "web" : "http://github.com/jberger/App-SimpleSlides/issues"
+         "web" : "http://github.com/jberger/App-MojoSlides/issues"
       },
       "license" : [
          "http://dev.perl.org/licenses/"
       ],
       "repository" : {
-         "url" : "http://github.com/jberger/App-SimpleSlides"
+         "url" : "http://github.com/jberger/App-MojoSlides"
       }
    },
    "version" : "0.01"
