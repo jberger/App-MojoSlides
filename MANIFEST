@@ -1,5 +1,6 @@
 bin/mojo_slides
 Build.PL
+Changes
 ex/example_presentation.pl
 ex/goodbye.html.ep
 ex/hello.html.ep
