@@ -2,7 +2,7 @@ package App::MojoSlides;
 
 use Mojo::Base 'Mojolicious';
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 $VERSION = eval $VERSION;
 
 use App::MojoSlides::Slides;
@@ -174,6 +174,10 @@ Of course you will still have to include them in some template for them to be in
 If true, the bootstrap-theme.min.css file will be included in the default layout.
 
 =back
+
+=head2 Slides from __DATA__
+
+Emulating L<Mojolicious::Lite>, you may also include slides (templates) in the C<__DATA__> section of your configuration file!
 
 =head2 The Slides (Templates)
 

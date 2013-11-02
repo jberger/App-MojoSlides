@@ -61,6 +61,10 @@ If true, the bootstrap-theme.min.css file will be included in the default layout
 
 =back
 
+=head2 Slides from __DATA__
+
+Emulating L<Mojolicious::Lite>, you may also include slides (templates) in the C<__DATA__> section of your configuration file!
+
 =head2 The Slides (Templates)
 
 As I have said, the slides are just Mojolicious Templates, and such they have certain structure.

@@ -19,7 +19,7 @@ no_index:
 provides:
   App::MojoSlides:
     file: lib/App/MojoSlides.pm
-    version: 0.01
+    version: 0.02
   App::MojoSlides::Slides:
     file: lib/App/MojoSlides/Slides.pm
 requires:
@@ -29,4 +29,4 @@ resources:
   bugtracker: http://github.com/jberger/App-MojoSlides/issues
   license: http://dev.perl.org/licenses/
   repository: http://github.com/jberger/App-MojoSlides
-version: 0.01
+version: 0.02

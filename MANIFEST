@@ -4,6 +4,7 @@ Changes
 ex/example_presentation.pl
 ex/goodbye.html.ep
 ex/hello.html.ep
+ex/presentation_from_data.pl
 lib/App/MojoSlides.pm
 lib/App/MojoSlides/files/public/bootstrap-theme.min.css
 lib/App/MojoSlides/files/public/bootstrap.min.css

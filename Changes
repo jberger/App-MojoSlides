@@ -1,5 +1,8 @@
 Revision history for Perl module App::MojoSlides
 
+0.02 2013-11-02
+  - Can use a __DATA__ section of the config file for slides.
+
 0.01 2013-11-02
   - Alpha release. You have been warned.
 
