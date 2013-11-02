@@ -1,0 +1,32 @@
+---
+abstract: 'Write your presentations in Perl and Mojolicious!'
+author:
+  - 'Joel Berger <joel.a.berger@gmail.com>'
+build_requires: {}
+configure_requires:
+  Module::Build: 0.36
+  Module::Build::Mojolicious: 0
+dynamic_config: 1
+generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.132830'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: App-SimpleSlides
+no_index:
+  file:
+    - README.pod
+provides:
+  App::SimpleSlides:
+    file: lib/App/SimpleSlides.pm
+    version: 0.01
+  App::SimpleSlides::Slides:
+    file: lib/App/SimpleSlides/Slides.pm
+requires:
+  File::ShareDir: 1.00
+  Mojolicious: 3.0
+resources:
+  bugtracker: http://github.com/jberger/App-SimpleSlides/issues
+  license: http://dev.perl.org/licenses/
+  repository: http://github.com/jberger/App-SimpleSlides
+version: 0.01

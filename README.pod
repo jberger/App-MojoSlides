@@ -1,0 +1,53 @@
+=head1 NAME
+
+App::SimpleSlides - Write your presentations in Perl and Mojolicious!
+
+=head1 SYNOPSIS
+
+ $ simple_slides mypresentation.pl daemon
+
+=head1 DESCRIPTION
+
+This application lets you write presentations using the simple Perlish syntax that
+L<Mojo::Template> provides for L<Mojolicious>. It follows a similar model to LaTeX Beamer
+in structure and usage, though it is not nearly as full featured.
+
+=head1 WARNING
+
+This software is in alpha form at best. It may eat baby kittens at any moment.
+
+=head1 TECHNOLOGIES USED
+
+=over 
+
+=item L<Mojolicious|http://mojolicio.us>
+
+=item L<Bootstrap|http://getbootstrap.com>
+
+=item L<jQuery|http://jquery.com>
+
+=item L<PPI>
+
+- if desired for Perl code highlighting
+
+=item L<Mousetrap|http://craig.is/killing/mice>
+
+- simple javascript keybinding library
+
+=back
+
+=head1 SOURCE REPOSITORY
+
+L<http://github.com/jberger/App-SimpleSlides> 
+
+=head1 AUTHOR
+
+Joel Berger, E<lt>joel.a.berger@gmail.comE<gt>
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (C) 2013 by Joel Berger
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+

@@ -1,0 +1,19 @@
+bin/simple_slides
+Build.PL
+ex/goodbye.html.ep
+ex/hello.html.ep
+ex/mypres.pl
+lib/App/SimpleSlides.pm
+lib/App/SimpleSlides/files/public/bootstrap-theme.min.css
+lib/App/SimpleSlides/files/public/bootstrap.min.css
+lib/App/SimpleSlides/files/public/bootstrap.min.js
+lib/App/SimpleSlides/files/public/jquery.min.js
+lib/App/SimpleSlides/files/public/mousetrap.min.js
+lib/App/SimpleSlides/files/public/simpleslides.css
+lib/App/SimpleSlides/files/public/simpleslides.js
+lib/App/SimpleSlides/files/templates/layouts/basic.html.ep
+lib/App/SimpleSlides/Slides.pm
+MANIFEST			This list of files
+README.pod
+META.yml
+META.json

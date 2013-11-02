@@ -1,0 +1,57 @@
+{
+   "abstract" : "Write your presentations in Perl and Mojolicious!",
+   "author" : [
+      "Joel Berger <joel.a.berger@gmail.com>"
+   ],
+   "dynamic_config" : 1,
+   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.132830",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "App-SimpleSlides",
+   "no_index" : {
+      "file" : [
+         "README.pod"
+      ]
+   },
+   "prereqs" : {
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0.36",
+            "Module::Build::Mojolicious" : "0"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "File::ShareDir" : "1.00",
+            "Mojolicious" : "3.0"
+         }
+      }
+   },
+   "provides" : {
+      "App::SimpleSlides" : {
+         "file" : "lib/App/SimpleSlides.pm",
+         "version" : "0.01"
+      },
+      "App::SimpleSlides::Slides" : {
+         "file" : "lib/App/SimpleSlides/Slides.pm"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "http://github.com/jberger/App-SimpleSlides/issues"
+      },
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ],
+      "repository" : {
+         "url" : "http://github.com/jberger/App-SimpleSlides"
+      }
+   },
+   "version" : "0.01"
+}
