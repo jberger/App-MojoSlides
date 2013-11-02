@@ -66,7 +66,8 @@ sub startup {
     return $c->app->slides->next($c->stash('slide'));
   });
 
-  $self->helper( last_slide => sub { shift->app->slides->last } );
+  $self->helper( first_slide => sub { shift->app->slides->first } );
+  $self->helper( last_slide  => sub { shift->app->slides->last  } );
 
   $self->helper( row     => sub { shift->tag( 'div', class => 'row', @_ ) } );
   $self->helper( column  => sub { shift->tag( 'div', class => 'col-md-'.shift, @_ ) } );
