@@ -131,6 +131,11 @@ This software is in alpha form at best. It may eat baby kittens at any moment.
 
 =back
 
+=head1 DEDICATION
+
+This module is dedicated to the organizers and attendees of YAPC::Brazil 2013.
+They were kind enough to invite me as their keynote speaker and in turn I wrote this application to present that talk, so I owe them a debt of thanks on both accounts.
+
 =head1 SOURCE REPOSITORY
 
 L<http://github.com/jberger/App-MojoSlides> 
