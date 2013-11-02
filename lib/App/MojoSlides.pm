@@ -42,6 +42,9 @@ sub startup {
     },
   });
 
+  # should this be optional?
+  $self->include_data_handle_from_file(scalar $self->presentation_file);
+
   if (my $path = $self->config->{templates}) {
     unshift @{ $self->renderer->paths }, ref $path ? @$path : $path;
   }
@@ -88,6 +91,21 @@ sub _action {
   my $slide = $slides->template_for($c->stash('slide'))
     or return $c->render_not_found;
   $c->render($slide, layout => 'basic') || $c->render_not_found;
+}
+
+# hic sunt dracones
+sub include_data_handle_from_file {
+  my ($self, $file) = @_;
+  require Mojo::Util;
+  my $string = Mojo::Util::slurp($file);
+  open my $handle, '<', \$string;
+  state $i = 0;
+  my $class = 'App::MojoSlides::TextOfFile' . $i++;
+  {
+    no strict 'refs';
+    *{$class.'::DATA'} = $handle;
+  }
+  unshift @{ $self->renderer->classes }, $class;
 }
 
 1;
