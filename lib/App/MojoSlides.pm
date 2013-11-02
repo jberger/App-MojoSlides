@@ -111,6 +111,52 @@ in structure and usage, though it is not nearly as full featured.
 
 This software is in alpha form at best. It may eat baby kittens at any moment.
 
+=head1 USAGE
+
+=head2 The Presentation File
+
+Each presentation needs a configuration file.
+This file is loaded by the C<mojo_slides> application via L<Mojolicious::Plugin::Config>,
+and as such may use any functionality it provides.
+Additionally, when the file is loaded one helper C<presentation_file> will have been added
+which can be used to reference the file and its path (see more below).
+
+=head3 Configuration Keys
+
+The file must evaluate to a hash reference, as all Mojolicious config files must.
+The application will look for several keys which establish the presentation.
+
+=over
+
+=item slides
+
+A hash reference used to create the L<App::MojoSlides::Slides> object which organizes the slide order, etc.
+See that module for documentation on how to use it.
+
+=item ppi
+
+If true, it will load L<Mojolicious::Plugin::PPI> to allow code highlighting using that plugin.
+The API for this key is still influx, but that much is probably not going to change.
+
+=item templates
+
+Use this key to specify which directories contain your slides.
+Your slides are actually Mojolicious Templates (see L<Mojolicious::Guides::Rendering> and L<Mojo::Template> for more on that.
+This key take a string or arrayref of strings which are prepended to the app's template directories.
+
+=item static
+
+Like C<templates> this, key takes a string or arrayref of strings, which are directories prepended to the app's static files directories.
+Use this to allow the inclusion of other style files or javascript that you might need.
+Of course you will still have to include them in some template for them to be included.
+
+=item bootstrap_theme
+
+If true, the bootstrap-theme.min.css file will be included in the default layout.
+
+=back
+
+
 =head1 TECHNOLOGIES USED
 
 =over 
