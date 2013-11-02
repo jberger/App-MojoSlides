@@ -3,6 +3,7 @@
   <head>
     <title><%= title %></title>
     %= stylesheet '/bootstrap.min.css'
+    %= stylesheet '/boostrap-theme.min.css' if config->{bootstrap_theme}
     %= stylesheet '/simpleslides.css'
     %= app->ppi_css if config->{ppi}
     </head>
@@ -33,7 +34,7 @@
       </ul>
     </div>
 
-    %= javascript '/jquery.js'
+    %= javascript '/jquery.min.js'
     %= javascript '/mousetrap.min.js'
     %= javascript '/simpleslides.js'
     %= javascript begin

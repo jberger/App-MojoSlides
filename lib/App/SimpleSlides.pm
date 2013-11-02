@@ -14,6 +14,8 @@ has slides => sub {
 sub startup {
   my $self = shift;
 
+  $self->plugin( 'InstallablePaths' );
+
   $self->helper( presentation_file => sub {
     require File::Spec;
     require File::Basename;
@@ -33,6 +35,7 @@ sub startup {
       ppi       => undef,
       templates => undef,
       static    => undef,
+      bootstrap_theme => undef,
     },
   });
 
