@@ -68,8 +68,9 @@ sub startup {
 
   $self->helper( last_slide => sub { shift->app->slides->last } );
 
-  $self->helper( row    => sub { shift->tag( 'div', class => 'row', @_ ) } );
-  $self->helper( column => sub { shift->tag( 'div', class => 'col-md-'.shift, @_ ) } );
+  $self->helper( row     => sub { shift->tag( 'div', class => 'row', @_ ) } );
+  $self->helper( column  => sub { shift->tag( 'div', class => 'col-md-'.shift, @_ ) } );
+  $self->helper( overlay => sub { shift->tag( 'div', ssOverlay => shift, @_ ) } );
 
   my $r = $self->routes;
   $r->any(
