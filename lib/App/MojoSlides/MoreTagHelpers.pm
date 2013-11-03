@@ -18,6 +18,8 @@ code
 col
 colgroup
 div
+dd
+del
 dl
 dt
 em
@@ -26,7 +28,6 @@ fieldset
 figcaption
 figure
 footer
-form
 h1
 h2
 h3
@@ -40,12 +41,9 @@ html
 i
 iframe
 img
-input
 label
 legend
 li
-meta
-nav
 noscript
 object
 ol
@@ -99,6 +97,11 @@ sub _tag {
     );
   };
 }
+
+sub _gen_pod_list {
+  my @list = map { "=item $_" } @HTML_TAGS;
+  return '=over', @list, '=back';
+}
   
 1;
 
@@ -127,3 +130,144 @@ If the helper gets a first argument that starts with C<#> or C<.>, that argument
 Note that only one id (the first) will be used if multiple are given.
 Note that if C<id> or C<class> or attributes are passed by name, they will overwrite these.
 
+=head1 ELEMENTS
+
+While this module wraps a large number of HTML tags some have not been included.
+Some elements are not included because of conflicts with existing keywords or helpers.
+Others are not likely to be useful and are not included.
+This list may change in the future, but common tags which meet the above critera are likely stable.
+
+
+=over
+
+=item a
+
+=item aside
+
+=item audio
+
+=item blockquote
+
+=item body
+
+=item br
+
+=item button
+
+=item canvas
+
+=item caption
+
+=item cite
+
+=item code
+
+=item col
+
+=item colgroup
+
+=item div
+
+=item dd
+
+=item del
+
+=item dl
+
+=item dt
+
+=item em
+
+=item embed
+
+=item fieldset
+
+=item figcaption
+
+=item figure
+
+=item footer
+
+=item h1
+
+=item h2
+
+=item h3
+
+=item h4
+
+=item h5
+
+=item h6
+
+=item head
+
+=item header
+
+=item hr
+
+=item html
+
+=item i
+
+=item iframe
+
+=item img
+
+=item label
+
+=item legend
+
+=item li
+
+=item noscript
+
+=item object
+
+=item ol
+
+=item optgroup
+
+=item option
+
+=item output
+
+=item p
+
+=item pre
+
+=item rp
+
+=item rt
+
+=item ruby
+
+=item script
+
+=item span
+
+=item strong
+
+=item style
+
+=item table
+
+=item tbody
+
+=item td
+
+=item textarea
+
+=item tfoot
+
+=item th
+
+=item thead
+
+=item tr
+
+=item ul
+
+=item video
+
+=back
