@@ -48,8 +48,8 @@ The API for this key is still influx, but that much is probably not going to cha
 =item templates
 
 Use this key to specify which directories contain your slides.
-Your slides are actually Mojolicious Templates (see L<Mojolicious::Guides::Rendering> and L<Mojo::Template> for more on that.
-This key take a string or arrayref of strings which are prepended to the app's template directories.
+Your slides are actually Mojolicious Templates (see L<Mojolicious::Guides::Rendering> and L<Mojo::Template> for more on that).
+This key takes a string or arrayref of strings which are prepended to the app's template directories.
 
 =item static
 
