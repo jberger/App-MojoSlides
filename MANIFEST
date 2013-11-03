@@ -14,9 +14,11 @@ lib/App/MojoSlides/files/public/mojoslides.css
 lib/App/MojoSlides/files/public/mojoslides.js
 lib/App/MojoSlides/files/public/mousetrap.min.js
 lib/App/MojoSlides/files/templates/layouts/basic.html.ep
+lib/App/MojoSlides/MoreTagHelpers.pm
 lib/App/MojoSlides/Slides.pm
 MANIFEST			This list of files
 META.json
 META.yml
 README.pod
 t/00-load.t
+t/more_tag_helpers.t

@@ -9,5 +9,5 @@ __DATA__
 
 @@ 1.html.ep
 
-%= tag p => 'It works!'
+%= p 'It works!'
 

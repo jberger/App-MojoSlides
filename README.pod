@@ -59,6 +59,10 @@ Of course you will still have to include them in some template for them to be in
 
 If true, the bootstrap-theme.min.css file will be included in the default layout.
 
+=item more_tag_helpers
+
+If true (by default), wrap lots more html tags into tag helpers from L<App::MojoSlides::MoreTagHelpers>.
+
 =back
 
 =head2 Slides from __DATA__
@@ -118,6 +122,8 @@ The syntax of the specification follows LaTeX Beamer, which is like C<2-> to sho
 N.B. adding C<msOverlay="2-4"> to nearly any HTML tag will work as expect too!
 
 =back
+
+Plus the tag helpers from L<App::MojoSlides::MoreTagHelpers> if the configuration option is true.
 
 =head1 TECHNOLOGIES USED
 

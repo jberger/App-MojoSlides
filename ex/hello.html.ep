@@ -2,14 +2,14 @@
 
 %= row begin
   %= column 6 => begin
-    %= tag p => 'Column 1'
+    %= p 'Column 1'
   % end
   %= column 6 => begin
-    %= tag p => 'Column 2'
-    %= tag p => msOverlay => '1-' => 'Overlay 1-'
-    %= tag p => msOverlay => '2-' => 'Overlay 2-'
+    %= p 'Column 2'
+    %= p msOverlay => '1-' => 'Overlay 1-'
+    %= p msOverlay => '2-' => 'Overlay 2-'
     %= overlay '3-' => begin
-      %= tag p => 'Overlay 3- via helper'
+      %= p 'Overlay 3- via helper'
     % end
   % end
 % end

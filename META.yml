@@ -20,6 +20,8 @@ provides:
   App::MojoSlides:
     file: lib/App/MojoSlides.pm
     version: 0.02
+  App::MojoSlides::MoreTagHelpers:
+    file: lib/App/MojoSlides/MoreTagHelpers.pm
   App::MojoSlides::Slides:
     file: lib/App/MojoSlides/Slides.pm
 requires:

@@ -39,11 +39,14 @@ sub startup {
       templates => undef,
       static    => undef,
       bootstrap_theme => undef,
+      more_tag_helpers => 1,
     },
   });
 
   # should this be optional?
   $self->include_data_handle_from_file(scalar $self->presentation_file);
+
+  $self->plugin('App::MojoSlides::MoreTagHelpers') if $self->config->{more_tag_helpers};
 
   if (my $path = $self->config->{templates}) {
     unshift @{ $self->renderer->paths }, ref $path ? @$path : $path;
@@ -173,6 +176,10 @@ Of course you will still have to include them in some template for them to be in
 
 If true, the bootstrap-theme.min.css file will be included in the default layout.
 
+=item more_tag_helpers
+
+If true (by default), wrap lots more html tags into tag helpers from L<App::MojoSlides::MoreTagHelpers>.
+
 =back
 
 =head2 Slides from __DATA__
@@ -232,6 +239,8 @@ The syntax of the specification follows LaTeX Beamer, which is like C<2-> to sho
 N.B. adding C<msOverlay="2-4"> to nearly any HTML tag will work as expect too!
 
 =back
+
+Plus the tag helpers from L<App::MojoSlides::MoreTagHelpers> if the configuration option is true.
 
 =head1 TECHNOLOGIES USED
 
