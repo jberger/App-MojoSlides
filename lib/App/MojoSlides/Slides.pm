@@ -12,6 +12,16 @@ has last  => sub {
 
 has 'list';
 
+sub new {
+  my $class = shift;
+  my $args;
+  if (@_==1) {
+    $args = { last => $_[0] } unless ref $_[0];
+    $args = { list => $_[0] } if ref $_[0] eq 'ARRAY';
+  }
+  return $class->SUPER::new($args ? $args : @_);
+}
+
 sub prev {
   my ($self, $current) = @_;
   return $current == $self->first ? $current : $current - 1;
@@ -57,6 +67,14 @@ However, your presentation configuration will contain a C<slides> key, so you mi
 Specifically, you will likely need either C<list> or C<last> attributes.
 If you provide a C<list>, these are the template names which map to slide C<n+1> when C<n> is the index in the arraref.
 If you instead provide a C<last> attribute, it will assume your templates are named C<1..last>.
+
+=head1 CONSTRUCTOR
+
+ App::MojoSlides::Slides->new(2)->last # 2
+ App::MojoSlides::Slides->new($arrayref)->list # $arrayref
+
+Since nearly every instance of this class will need either a C<last> or C<list> initialization,
+the constructor will take a single scalar or arrayrefence as inialization of those attributes respectively.
 
 =head1 ATTRIBUTES
 

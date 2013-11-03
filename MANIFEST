@@ -22,3 +22,4 @@ META.yml
 README.pod
 t/00-load.t
 t/more_tag_helpers.t
+t/slides.t

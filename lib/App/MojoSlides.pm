@@ -2,7 +2,7 @@ package App::MojoSlides;
 
 use Mojo::Base 'Mojolicious';
 
-our $VERSION = '0.03';
+our $VERSION = '0.04';
 $VERSION = eval $VERSION;
 
 use App::MojoSlides::Slides;
@@ -158,6 +158,8 @@ The application will look for several keys which establish the presentation.
 
 A hash reference used to create the L<App::MojoSlides::Slides> object which organizes the slide order, etc.
 See that module for documentation on how to use it.
+Usually this value will be a number, representing the ordinal number of the last slide in the case of numbered templates,
+or else an array reference of the names of the templates in display order.
 
 =item ppi
 

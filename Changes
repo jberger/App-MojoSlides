@@ -1,8 +1,11 @@
 Revision history for Perl module App::MojoSlides
 
+0.04 2013-11-03
+  - Simplified specification of slides in configuration.
+
 0.03 2013-11-03
-  - Include App::MojoSlides::MoreTagHelpers
-  - Better mocking of DATA handle
+  - Include App::MojoSlides::MoreTagHelpers.
+  - Better mocking of DATA handle.
 
 0.02 2013-11-02
   - Can use a __DATA__ section of the config file for slides.

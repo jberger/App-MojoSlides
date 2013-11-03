@@ -1,7 +1,5 @@
 my $conf = {
-  slides => {
-    last => 1,
-  },
+  slides => 1,
   bootstrap_theme => 1,
 };
 
