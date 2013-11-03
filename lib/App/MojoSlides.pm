@@ -188,7 +188,7 @@ If true (by default), wrap lots more html tags into tag helpers from L<App::Mojo
 
 =back
 
-=head2 Slides from __DATA__
+=head3 Slides from __DATA__
 
 Emulating L<Mojolicious::Lite>, you may also include slides (templates) in the C<__DATA__> section of your configuration file!
 
