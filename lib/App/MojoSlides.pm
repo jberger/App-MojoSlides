@@ -102,6 +102,10 @@ sub include_data_handle_from_file {
   require Mojo::Util;
   my $string = Mojo::Util::slurp($file);
   open my $handle, '<', \$string;
+  while (<$handle>) {
+    last if /^__DATA__/; # seek to __DATA__
+  }
+
   state $i = 0;
   my $class = 'App::MojoSlides::TextOfFile' . $i++;
   {
