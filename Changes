@@ -1,6 +1,6 @@
 Revision history for Perl module App::MojoSlides
 
-0.03
+0.03 2013-11-03
   - Include App::MojoSlides::MoreTagHelpers
   - Better mocking of DATA handle
 
