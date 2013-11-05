@@ -40,6 +40,8 @@ sub startup {
       static    => undef,
       bootstrap_theme => undef,
       more_tag_helpers => 1,
+      extra_css => undef,
+      extra_js => undef,
     },
   });
 
@@ -78,6 +80,7 @@ sub startup {
   $self->helper( row     => sub { shift->tag( 'div', class => 'row', @_ ) } );
   $self->helper( column  => sub { shift->tag( 'div', class => 'col-md-'.shift, @_ ) } );
   $self->helper( overlay => sub { shift->tag( 'div', msOverlay => shift, @_ ) } );
+  $self->helper( vspace  => sub { shift->tag( 'div', style => "min-height: @{[shift]};" => '') } );
 
   my $r = $self->routes;
   $r->any(
@@ -185,6 +188,13 @@ If true, the bootstrap-theme.min.css file will be included in the default layout
 =item more_tag_helpers
 
 If true (by default), wrap lots more html tags into tag helpers from L<App::MojoSlides::MoreTagHelpers>.
+
+=item extra_css
+
+=item extra_js
+
+If desired, these values may contain a string or arrayreference of strings of the full path to any publically available css or javascript file respectively which should be included in the overall template.
+Note that the string should start with a leading C</>.
 
 =back
 

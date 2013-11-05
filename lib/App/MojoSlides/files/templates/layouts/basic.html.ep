@@ -6,6 +6,12 @@
     %= stylesheet '/bootstrap-theme.min.css' if config->{bootstrap_theme}
     %= stylesheet '/mojoslides.css'
     %= app->ppi_css if config->{ppi}
+    % if (my $files = config->{extra_css}) {
+      % $files = [ $files ] unless ref $files;
+      % foreach my $file (@$files) {
+        %= stylesheet $file
+      % }
+    % }
     </head>
   <body>
 
@@ -43,5 +49,12 @@
       "<%= url_for slide => { slide => next_slide } %>"
     );
     % end
+    
+    % if (my $files = config->{extra_js}) {
+      % $files = [ $files ] unless ref $files;
+      % foreach my $file (@$files) {
+        %= javascript $file
+      % }
+    % }
   </body>
 </html>

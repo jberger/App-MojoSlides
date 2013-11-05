@@ -25,7 +25,6 @@ provides:
   App::MojoSlides::Slides:
     file: lib/App/MojoSlides/Slides.pm
 requires:
-  File::ShareDir: 1.00
   Mojolicious: 3.0
 resources:
   bugtracker: http://github.com/jberger/App-MojoSlides/issues

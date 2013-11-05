@@ -1,5 +1,9 @@
 Revision history for Perl module App::MojoSlides
 
+0.05 
+  - added vspace helper
+  - handle msOverlay with a single number correctly
+
 0.04 2013-11-03
   - Simplified specification of slides in configuration.
 
