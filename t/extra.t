@@ -9,7 +9,9 @@ my $t = Test::Mojo->new('App::MojoSlides');
 
 $t->get_ok('/1')
   ->text_is('p' => 'Hi')
-  ->content_like(qr/myjs\.js/);
+  ->element_exists('script[src="myjs.js"]')
+  ->element_exists('link[href="mycss1.css"]')
+  ->element_exists('link[href="mycss2.css"]');
 
 done_testing;
 
