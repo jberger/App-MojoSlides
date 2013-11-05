@@ -21,5 +21,7 @@ META.json
 META.yml
 README.pod
 t/00-load.t
+t/extra.t
 t/more_tag_helpers.t
+t/pres/extra.pl
 t/slides.t
