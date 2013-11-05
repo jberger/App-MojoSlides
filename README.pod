@@ -65,6 +65,13 @@ If true, the bootstrap-theme.min.css file will be included in the default layout
 
 If true (by default), wrap lots more html tags into tag helpers from L<App::MojoSlides::MoreTagHelpers>.
 
+=item extra_css
+
+=item extra_js
+
+If desired, these values may contain a string or arrayreference of strings of the full path to any publically available css or javascript file respectively which should be included in the overall template.
+Note that the string should start with a leading C</>.
+
 =back
 
 =head3 Slides from __DATA__
