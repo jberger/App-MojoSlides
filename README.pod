@@ -137,6 +137,13 @@ The syntax of the specification follows LaTeX Beamer, which is like C<2-> to sho
 
 N.B. adding C<msOverlay="2-4"> to nearly any HTML tag will work as expect too!
 
+=item vspace
+
+ %= vspace '50px'
+ <div style="min-height: 50px;"></div>
+
+Adds a section of vertical space of a given height.
+
 =back
 
 Plus the tag helpers from L<App::MojoSlides::MoreTagHelpers> if the configuration option is true.
