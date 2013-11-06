@@ -1,9 +1,10 @@
 Revision history for Perl module App::MojoSlides
 
-0.05 
+0.05 2013-11-05
   - added vspace helper
   - handle msOverlay with a single number correctly
   - added extra_css and extra_js config keys
+  - added header_template and footer_template config keys
 
 0.04 2013-11-03
   - Simplified specification of slides in configuration.
