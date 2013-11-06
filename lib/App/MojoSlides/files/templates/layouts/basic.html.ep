@@ -18,7 +18,9 @@
   <!-- wrap non-footer contents -->
     <div id="wrap">
       <div class="container">
-        <h1 class="center"><%= title %></h1>
+        % if (my $header = config->{header_template} ) {
+          %= include $header
+        % }
         <div id="main">
           %= content
         </div>
@@ -27,17 +29,9 @@
 
     <!-- footer -->
     <div id="footer" class="container">
-      <ul class="pager">
-        <li class="previous">
-          %= link_to Previous => slide => { slide => prev_slide }
-        </li>
-        <li>
-          %= "Page $slide / " . last_slide
-        </li>
-        <li class="next">
-          %= link_to Next => slide => { slide => next_slide }
-        </li>
-      </ul>
+      % if (my $footer = config->{footer_template}) {
+        %= include $footer
+      % }
     </div>
 
     %= javascript '/jquery.min.js'

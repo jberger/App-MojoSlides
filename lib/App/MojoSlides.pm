@@ -42,6 +42,8 @@ sub startup {
       more_tag_helpers => 1,
       extra_css => undef,
       extra_js => undef,
+      header_template => 'ms_header',
+      footer_template => 'ms_footer',
     },
   });
 
@@ -195,6 +197,13 @@ If true (by default), wrap lots more html tags into tag helpers from L<App::Mojo
 
 If desired, these values may contain a string or arrayreference of strings of the full path to any publically available css or javascript file respectively which should be included in the overall template.
 Note that the string should start with a leading C</>.
+
+=item header_template
+
+=item footer_template
+
+The name of the template to be included as the header or footer. Defaults to C<ms_header> and C<ms_footer> respectively.
+Set to C<undef> to not include any template.
 
 =back
 
