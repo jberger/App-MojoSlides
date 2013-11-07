@@ -1,5 +1,8 @@
 Revision history for Perl module App::MojoSlides
 
+0.06
+  - renamed msOverlay attribute to ms_overlay for case-invariance (html compliance)
+
 0.05 2013-11-05
   - added vspace helper
   - handle msOverlay with a single number correctly

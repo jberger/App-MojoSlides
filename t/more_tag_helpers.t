@@ -22,8 +22,8 @@ $t->get_ok('/s')
   ->element_exists_not('#bar');
 
 $t->get_ok('/i')
-  ->text_is('li[msOverlay="1-"]' => 'One')
-  ->text_is('li[msOverlay="2-"]' => 'Two');
+  ->text_is('li[ms_overlay="1-"]' => 'One')
+  ->text_is('li[ms_overlay="2-"]' => 'Two');
 
 done_testing;
 

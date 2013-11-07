@@ -27,6 +27,6 @@ body {
 /* Other styling
 -------------------------------------------------- */
 
-[msOverlay] { display: none }
+[ms_overlay] { display: none }
 
 .center { text-align: center; }

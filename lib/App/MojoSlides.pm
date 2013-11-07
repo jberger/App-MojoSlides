@@ -81,7 +81,7 @@ sub startup {
 
   $self->helper( row     => sub { shift->tag( 'div', class => 'row', @_ ) } );
   $self->helper( column  => sub { shift->tag( 'div', class => 'col-md-'.shift, @_ ) } );
-  $self->helper( overlay => sub { shift->tag( 'div', msOverlay => shift, @_ ) } );
+  $self->helper( overlay => sub { shift->tag( 'div', ms_overlay => shift, @_ ) } );
   $self->helper( vspace  => sub { shift->tag( 'div', style => "min-height: @{[shift]};" => '') } );
 
   my $r = $self->routes;
@@ -258,10 +258,10 @@ Takes that width and a string or template block, though again, you probably mean
   Stuff to show only on increments 2 through 4
  % end
 
-Creates a div with the attribute C<msOverlay> which the css/js bits of the system use for incrementing slides.
+Creates a div with the attribute C<ms_overlay> which the css/js bits of the system use for incrementing slides.
 The syntax of the specification follows LaTeX Beamer, which is like C<2-> to show an item from increment 2 onwards and so on.
 
-N.B. adding C<msOverlay="2-4"> to nearly any HTML tag will work as expect too!
+N.B. adding C<ms_overlay="2-4"> to nearly any HTML tag will work as expect too!
 
 =item vspace
 

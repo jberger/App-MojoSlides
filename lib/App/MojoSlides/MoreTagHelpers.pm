@@ -112,7 +112,7 @@ sub _incremental {
   require Mojo::DOM;
   my $dom = Mojo::DOM->new($text);
   $dom->children->[0]->children->each(sub{
-    $_->{msOverlay} = $i++ . '-';
+    $_->{ms_overlay} = $i++ . '-';
   });
 
   require Mojo::ByteStream;
