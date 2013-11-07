@@ -109,9 +109,15 @@ sub _incremental {
   my $text = pop;
   my $i = shift || 1;
 
+  $text = $text->() if eval { ref $text eq 'CODE' };
+
   require Mojo::DOM;
   my $dom = Mojo::DOM->new($text);
-  $dom->children->[0]->children->each(sub{
+  my $children = $dom->children;
+  if ($children->size == 1) {
+    $children = $children->[0]->children;
+  }
+  $children->each(sub{
     $_->{ms_overlay} = $i++ . '-';
   });
 
@@ -141,12 +147,44 @@ App::MojoSlides::MoreTagHelpers - More tag helpers for your slides
 
 =head1 DESCRIPTION
 
-Wraps lots of HTML tags (though not all) into helpers.
+Extra tag helpers useful for templating and slide making
+
+=head1 NON-ELEMENT HELPERS
+
+=over
+
+=item incremental
+
+ %= ul begin
+   %= incremental begin
+     %= li 'Always shown'
+     %= li 'Shown after one click'
+   % end
+ % end
+
+ %= incremental ul begin
+   %= li 'Always shown'
+   %= li 'Shown after one click'
+ % end
+
+  <ul>
+    <li ms_overlay="1-">Always shown</li>
+    <li ms_overlay="2-">Shown after one click</li>
+  </ul>
+  
+
+Adds ms_overlay attributes to a sequence of elements with increasing start number.
+Note that if passed an html element which has only one element, the attributes will be applied to the children of that attribute.
+Because of this, the two templates above result in the same shown output.
+
+=back
+
+=head1 ELEMENTS
+
+This module wraps lots of the HTML tags (though not all) into helpers.
 If the helper gets a first argument that starts with C<#> or C<.>, that argument is parsed like a selector.
 Note that only one id (the first) will be used if multiple are given.
 Note that if C<id> or C<class> or attributes are passed by name, they will overwrite these.
-
-=head1 ELEMENTS
 
 While this module wraps a large number of HTML tags some have not been included.
 Some elements are not included because of conflicts with existing keywords or helpers.
