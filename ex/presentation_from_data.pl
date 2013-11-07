@@ -9,3 +9,7 @@ __DATA__
 
 %= p 'It works!'
 
+%= incremental ul begin
+  %= li 'Hello'
+  %= li 'World'
+% end

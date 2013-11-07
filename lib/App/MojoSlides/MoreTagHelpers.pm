@@ -76,6 +76,7 @@ sub register {
   foreach my $tag (@HTML_TAGS) {
     $app->helper( $tag => _tag($tag) );
   }
+  $app->helper( incremental => \&_incremental );
 }
 
 sub _tag {
@@ -101,6 +102,21 @@ sub _tag {
 sub _gen_pod_list {
   my @list = map { "=item $_" } @HTML_TAGS;
   return '=over', @list, '=back';
+}
+
+sub _incremental {
+  my $c = shift;
+  my $text = pop;
+  my $i = shift || 1;
+
+  require Mojo::DOM;
+  my $dom = Mojo::DOM->new($text);
+  $dom->children->[0]->children->each(sub{
+    $_->{msOverlay} = $i++ . '-';
+  });
+
+  require Mojo::ByteStream;
+  return Mojo::ByteStream->new($dom->to_xml);
 }
   
 1;

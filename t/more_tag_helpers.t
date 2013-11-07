@@ -4,6 +4,7 @@ plugin 'App::MojoSlides::MoreTagHelpers';
 
 any '/'  => 'index';
 any '/s' => 'selector';
+any '/i' => 'incremental';
 
 use Test::More;
 use Test::Mojo;
@@ -19,6 +20,10 @@ $t->get_ok('/s')
   ->text_is('.bat' => 'hi')
   ->text_is('#foo.baz.bat' => 'hi')
   ->element_exists_not('#bar');
+
+$t->get_ok('/i')
+  ->text_is('li[msOverlay="1-"]' => 'One')
+  ->text_is('li[msOverlay="2-"]' => 'Two');
 
 done_testing;
 
@@ -36,3 +41,9 @@ __DATA__
 
 %= div '#foo#bar.baz.bat' => 'hi'
 
+@@ incremental.html.ep
+
+%= incremental ul begin
+  %= li 'One'
+  %= li 'Two'
+% end
