@@ -1,7 +1,8 @@
 Revision history for Perl module App::MojoSlides
 
-0.06
+0.06 2013-11-06
   - renamed msOverlay attribute to ms_overlay for case-invariance (html compliance)
+  - added "incremental" helper, especially useful for building incrementing lists
 
 0.05 2013-11-05
   - added vspace helper

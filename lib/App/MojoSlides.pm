@@ -2,7 +2,7 @@ package App::MojoSlides;
 
 use Mojo::Base 'Mojolicious';
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 $VERSION = eval $VERSION;
 
 use App::MojoSlides::Slides;
