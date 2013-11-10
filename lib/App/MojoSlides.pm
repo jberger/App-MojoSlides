@@ -2,7 +2,7 @@ package App::MojoSlides;
 
 use Mojo::Base 'Mojolicious';
 
-our $VERSION = '0.06';
+our $VERSION = '0.07';
 $VERSION = eval $VERSION;
 
 use App::MojoSlides::Slides;
@@ -44,6 +44,7 @@ sub startup {
       extra_js => undef,
       header_template => 'ms_header',
       footer_template => 'ms_footer',
+      finally => sub {},
     },
   });
 
@@ -91,6 +92,9 @@ sub startup {
     [ slide => qr/\b\d+\b/ ],
     \&_action,
   );
+
+  my $finally = $self->config->{finally};
+  $self->$finally();
 }
 
 sub _action {
@@ -204,6 +208,11 @@ Note that the string should start with a leading C</>.
 
 The name of the template to be included as the header or footer. Defaults to C<ms_header> and C<ms_footer> respectively.
 Set to C<undef> to not include any template.
+
+=item finally
+
+A code reference that is called as a method against the application as late as possible in the setup method.
+This lets you do any final actions that need to be done after the configuration has been loaded.
 
 =back
 

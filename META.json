@@ -35,7 +35,7 @@
    "provides" : {
       "App::MojoSlides" : {
          "file" : "lib/App/MojoSlides.pm",
-         "version" : "0.06"
+         "version" : "0.07"
       },
       "App::MojoSlides::MoreTagHelpers" : {
          "file" : "lib/App/MojoSlides/MoreTagHelpers.pm"
@@ -56,5 +56,5 @@
          "url" : "http://github.com/jberger/App-MojoSlides"
       }
    },
-   "version" : "0.06"
+   "version" : "0.07"
 }
