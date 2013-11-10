@@ -11,6 +11,12 @@ use Test::More;
 use Test::Mojo;
 
 my $t = Test::Mojo->new;
+
+my $diag = sub {
+  diag $t->tx->res->dom;
+  diag $t->app->dumper( $t->tx->res->dom->tree );
+};
+
 $t->get_ok('/')
   ->text_is('h2' => 'Hello World')
   ->text_is('div.find #me' => 'Gotcha');
@@ -23,12 +29,12 @@ $t->get_ok('/s')
   ->element_exists_not('#bar');
 
 $t->get_ok('/i_parent')
-  ->text_is('li[ms_overlay="1-"]' => 'One')
-  ->text_is('li[ms_overlay="2-"]' => 'Two');
+  ->text_is('li[ms_overlay="1-"]' => 'One')->or($diag)
+  ->text_is('li[ms_overlay="2-"]' => 'Two')->or($diag);
 
 $t->get_ok('/i_items')
-  ->text_is('li[ms_overlay="1-"]' => 'First')
-  ->text_is('li[ms_overlay="2-"]' => 'Second');
+  ->text_is('li[ms_overlay="1-"]' => 'First')->or($diag)
+  ->text_is('li[ms_overlay="2-"]' => 'Second')->or($diag);
 
 done_testing;
 
