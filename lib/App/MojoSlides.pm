@@ -2,7 +2,7 @@ package App::MojoSlides;
 
 use Mojo::Base 'Mojolicious';
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 $VERSION = eval $VERSION;
 
 use App::MojoSlides::Slides;
@@ -81,7 +81,7 @@ sub startup {
   $self->helper( last_slide  => sub { shift->app->slides->last  } );
 
   $self->helper( row     => sub { shift->tag( 'div', class => 'row', @_ ) } );
-  $self->helper( column  => sub { shift->tag( 'div', class => 'col-md-'.shift, @_ ) } );
+  $self->helper( column  => \&_column );
   $self->helper( overlay => sub { shift->tag( 'div', ms_overlay => shift, @_ ) } );
   $self->helper( vspace  => sub { shift->tag( 'div', style => "min-height: @{[shift]};" => '') } );
 
@@ -103,6 +103,13 @@ sub _action {
   my $slide = $slides->template_for($c->stash('slide'))
     or return $c->render_not_found;
   $c->render($slide, layout => 'basic') || $c->render_not_found;
+}
+
+sub _column {
+  my $c = shift;
+  my $cols = ref $_[0] ? shift : [ shift ];
+  my $class = join ' ', map { "col-md-$_" } @$cols;
+  return $c->tag( div => class => $class, @_ );
 }
 
 # hic sunt dracones
@@ -258,8 +265,15 @@ Takes a string or template block like Mojolicious' C<tag> helper does, though yo
    column contents
  % end
 
+ %= column [3, 'offset-3'] => begin
+   column contents
+ % end
+
+
 Creates a div of a given width (a number out of 12, see Bootstrap).
 Takes that width and a string or template block, though again, you probably mean block.
+To give more than one class, pass an array reference.
+Each class is prepended by C<col-md->.
 
 =item overlay
 

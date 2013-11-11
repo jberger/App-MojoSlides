@@ -4,7 +4,7 @@
   %= column 6 => begin
     %= p 'Column 1'
   % end
-  %= column 6 => begin
+  %= column [6, 'offset-3'] => begin
     %= p 'Column 2'
     %= p ms_overlay => '1-' => 'Overlay 1-'
     %= p ms_overlay => '2-' => 'Overlay 2-'

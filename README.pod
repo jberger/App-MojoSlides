@@ -128,8 +128,15 @@ Takes a string or template block like Mojolicious' C<tag> helper does, though yo
    column contents
  % end
 
+ %= column [3, 'offset-3'] => begin
+   column contents
+ % end
+
+
 Creates a div of a given width (a number out of 12, see Bootstrap).
 Takes that width and a string or template block, though again, you probably mean block.
+To give more than one class, pass an array reference.
+Each class is prepended by C<col-md->.
 
 =item overlay
 

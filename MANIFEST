@@ -23,9 +23,11 @@ META.json
 META.yml
 README.pod
 t/00-load.t
+t/columns.t
 t/extra.t
 t/header_footer.t
 t/more_tag_helpers.t
+t/pres/columns.pl
 t/pres/extra.pl
 t/pres/header_footer.pl
 t/slides.t
