@@ -1,5 +1,8 @@
 Revision history for Perl module App::MojoSlides
 
+0.08 2013-11-10
+  - fixed ms_overlay bug preventing more than 9 increments
+
 0.07 2013-11-10
   - added finally key for further flexibility
   - added more diagnostics for some Heisenbugs seen on CPANTesters for v0.06
