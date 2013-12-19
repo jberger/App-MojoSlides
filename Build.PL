@@ -15,6 +15,7 @@ my $build = Module::Build::Mojolicious->new(
   },
   requires => {
     'Mojolicious' => '3.0',
+    'Mojolicious::Plugin::MostTagHelpers' => '0.01',
   },
   meta_merge => {
     resources  => {

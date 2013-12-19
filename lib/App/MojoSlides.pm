@@ -51,7 +51,7 @@ sub startup {
   # should this be optional?
   $self->include_data_handle_from_file(scalar $self->presentation_file);
 
-  $self->plugin('App::MojoSlides::MoreTagHelpers') if $self->config->{more_tag_helpers};
+  $self->plugin('Mojolicious::Plugin::MostTagHelpers') if $self->config->{more_tag_helpers};
 
   if (my $path = $self->config->{templates}) {
     unshift @{ $self->renderer->paths }, ref $path ? @$path : $path;
@@ -200,7 +200,7 @@ If true, the bootstrap-theme.min.css file will be included in the default layout
 
 =item more_tag_helpers
 
-If true (by default), wrap lots more html tags into tag helpers from L<App::MojoSlides::MoreTagHelpers>.
+If true (by default), wrap lots more html tags into tag helpers from L<Mojolicious::Plugin::MostTagHelpers>.
 
 =item extra_css
 
@@ -295,7 +295,7 @@ Adds a section of vertical space of a given height.
 
 =back
 
-Plus the tag helpers from L<App::MojoSlides::MoreTagHelpers> if the configuration option is true.
+Plus the tag helpers from L<Mojolicious::Plugin::MostTagHelpers> if the configuration option is true.
 
 =head1 TECHNOLOGIES USED
 
