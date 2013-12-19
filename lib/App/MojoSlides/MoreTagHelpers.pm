@@ -1,4 +1,4 @@
-package App::MojoSlides::MoreTagHelpers;
+package Mojolicious::Plugin::MostTagHelpers;
 
 use Mojo::Base 'Mojolicious::Plugin';
 
@@ -131,7 +131,7 @@ __END__
 
 =head1 NAME
 
-App::MojoSlides::MoreTagHelpers - More tag helpers for your slides
+Mojolicious::Plugin::MostTagHelpers - More tag helpers for your slides
 
 =head1 SYNOPSIS
 
