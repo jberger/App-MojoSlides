@@ -14,7 +14,7 @@ my $build = Module::Build::Mojolicious->new(
     'Module::Build::Mojolicious' => 0,
   },
   requires => {
-    'Mojolicious' => '3.0',
+    'Mojolicious' => '4.77', # Mojo::DOM->to_string
   },
   meta_merge => {
     resources  => {

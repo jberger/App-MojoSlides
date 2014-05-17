@@ -1,5 +1,9 @@
 Revision history for Perl module App::MojoSlides
 
+0.09 2014-05-17
+  - fixed compatibility with newer Mojolicious version
+    - bumped required Mojolicious version to 4.77
+
 0.08 2013-11-10
   - fixed ms_overlay bug preventing more than 9 increments
   - column can now take an array reference of classes

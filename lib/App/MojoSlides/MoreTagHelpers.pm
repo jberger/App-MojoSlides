@@ -122,7 +122,7 @@ sub _incremental {
   });
 
   require Mojo::ByteStream;
-  return Mojo::ByteStream->new($dom->to_xml);
+  return Mojo::ByteStream->new($dom->to_string);
 }
   
 1;

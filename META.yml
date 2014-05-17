@@ -4,14 +4,14 @@ author:
   - 'Joel Berger <joel.a.berger@gmail.com>'
 build_requires: {}
 configure_requires:
-  Module::Build: 0.36
-  Module::Build::Mojolicious: 0
+  Module::Build: '0.36'
+  Module::Build::Mojolicious: '0'
 dynamic_config: 1
-generated_by: 'Module::Build version 0.4003, CPAN::Meta::Converter version 2.132830'
+generated_by: 'Module::Build version 0.4205, CPAN::Meta::Converter version 2.140640'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
-  version: 1.4
+  version: '1.4'
 name: App-MojoSlides
 no_index:
   file:
@@ -19,16 +19,16 @@ no_index:
 provides:
   App::MojoSlides:
     file: lib/App/MojoSlides.pm
-    version: 0.08
+    version: '0.09'
   App::MojoSlides::MoreTagHelpers:
     file: lib/App/MojoSlides/MoreTagHelpers.pm
   App::MojoSlides::Slides:
     file: lib/App/MojoSlides/Slides.pm
 requires:
-  File::ShareDir: 1.00
-  Mojolicious: 3.0
+  File::ShareDir: '1.00'
+  Mojolicious: '4.77'
 resources:
   bugtracker: http://github.com/jberger/App-MojoSlides/issues
   license: http://dev.perl.org/licenses/
   repository: http://github.com/jberger/App-MojoSlides
-version: 0.08
+version: '0.09'

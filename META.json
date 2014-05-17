@@ -4,7 +4,7 @@
       "Joel Berger <joel.a.berger@gmail.com>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.132830",
+   "generated_by" : "Module::Build version 0.4205",
    "license" : [
       "perl_5"
    ],
@@ -28,14 +28,14 @@
       "runtime" : {
          "requires" : {
             "File::ShareDir" : "1.00",
-            "Mojolicious" : "3.0"
+            "Mojolicious" : "4.77"
          }
       }
    },
    "provides" : {
       "App::MojoSlides" : {
          "file" : "lib/App/MojoSlides.pm",
-         "version" : "0.08"
+         "version" : "0.09"
       },
       "App::MojoSlides::MoreTagHelpers" : {
          "file" : "lib/App/MojoSlides/MoreTagHelpers.pm"
@@ -56,5 +56,5 @@
          "url" : "http://github.com/jberger/App-MojoSlides"
       }
    },
-   "version" : "0.08"
+   "version" : "0.09"
 }
