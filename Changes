@@ -1,5 +1,8 @@
 Revision history for Perl module App::MojoSlides
 
+0.10 2014-05-21
+  - Fixed missing dependency in Build.PL
+
 0.09 2014-05-17
   - fixed compatibility with newer Mojolicious version
     - bumped required Mojolicious version to 4.77

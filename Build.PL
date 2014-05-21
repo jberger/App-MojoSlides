@@ -15,6 +15,7 @@ my $build = Module::Build::Mojolicious->new(
   },
   requires => {
     'Mojolicious' => '4.77', # Mojo::DOM->to_string
+    'Mojolicious::Plugin::InstallablePaths' => 0,
   },
   meta_merge => {
     resources  => {
