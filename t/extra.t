@@ -14,7 +14,7 @@ $t->get_ok('/1')
   ->element_exists('link[href="mycss2.css"]');
 
 $t->get_ok('/2')
-  ->text_is('p#finally' => 'Works');
+  ->text_like('p#finally' => qr/Works/);
 
 done_testing;
 
