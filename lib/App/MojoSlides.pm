@@ -2,10 +2,12 @@ package App::MojoSlides;
 
 use Mojo::Base 'Mojolicious';
 
-our $VERSION = '0.10';
+our $VERSION = '0.11';
 $VERSION = eval $VERSION;
 
 use App::MojoSlides::Slides;
+
+use Mojo::File;
 
 has slides => sub {
   my $self = shift;
@@ -116,7 +118,7 @@ sub _column {
 sub include_data_handle_from_file {
   my ($self, $file) = @_;
   require Mojo::Util;
-  my $string = Mojo::Util::slurp($file);
+  my $string = Mojo::File->new($file)->slurp;
   open my $handle, '<', \$string;
   while (<$handle>) {
     last if /^__DATA__/; # seek to __DATA__

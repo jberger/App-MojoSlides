@@ -1,5 +1,8 @@
 Revision history for Perl module App::MojoSlides
 
+0.11 2017-03-13
+  - Fix deprecated use of Mojo::Util::slurp
+
 0.10 2014-05-21
   - Fixed missing dependency in Build.PL
 
