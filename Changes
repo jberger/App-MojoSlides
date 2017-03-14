@@ -1,7 +1,12 @@
 Revision history for Perl module App::MojoSlides
 
 0.11 2017-03-13
+  - Deprecate the dist
+    - There will be no further support given
+    - Adoption requests will be considered
   - Fix deprecated use of Mojo::Util::slurp
+    - Bump Mojolicious dependency to 7.15
+  - Fix tests failing since Mojolicious 7.0
 
 0.10 2014-05-21
   - Fixed missing dependency in Build.PL

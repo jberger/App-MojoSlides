@@ -139,7 +139,7 @@ __END__
 
 =head1 NAME
 
-App::MojoSlides - Write your presentations in Perl and Mojolicious!
+App::MojoSlides - DEPRECATED Write your presentations in Perl and Mojolicious!
 
 =head1 SYNOPSIS
 
@@ -154,6 +154,14 @@ in structure and usage, though it is not nearly as full featured.
 =head1 WARNING
 
 This software is in alpha form at best. It may eat baby kittens at any moment.
+
+Indeed it never really got better than this, that's why:
+
+=head1 DEPRECATED
+
+This module is now officially deprecated.
+I will give it no further effort.
+If someone would like to adopt it, please contact me.
 
 =head1 USAGE
 

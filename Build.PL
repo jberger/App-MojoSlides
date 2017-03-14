@@ -18,6 +18,7 @@ my $build = Module::Build::Mojolicious->new(
     'Mojolicious::Plugin::InstallablePaths' => 0,
   },
   meta_merge => {
+    x_deprecated => 1,
     resources  => {
       repository => "http://github.com/jberger/App-MojoSlides",
       bugtracker => "http://github.com/jberger/App-MojoSlides/issues",
